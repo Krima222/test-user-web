@@ -42,17 +42,16 @@ export function App() {
           {filteredUsers && (
             <Grid
               cellRenderer={({ columnIndex, key, rowIndex, style }) => {
+                const user = filteredUsers[rowIndex * 3 + columnIndex];
                 return (
-                  <Card
-                    key={key}
-                    style={style}
-                    user={filteredUsers[rowIndex * 3 + columnIndex]}
-                    onDelete={() =>
-                      handleUserDelete(
-                        filteredUsers[rowIndex * 3 + columnIndex].id.value,
-                      )
-                    }
-                  />
+                  user && (
+                    <Card
+                      key={key}
+                      style={style}
+                      user={user}
+                      onDelete={() => handleUserDelete(user.id.value)}
+                    />
+                  )
                 );
               }}
               columnCount={3}
