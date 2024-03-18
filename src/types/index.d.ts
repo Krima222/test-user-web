@@ -14,16 +14,16 @@ declare module '*.module.scss' {
 }
 
 declare module '*.png' {
-  const value: HTMLImageElement;
+  const value: string;
   export = value;
 }
 
 declare module '*.jpg' {
-  const value: HTMLImageElement;
+  const value: string;
   export = value;
 }
 
 declare module '*.svg' {
-  const value: HTMLImageElement;
+  const value: string;
   export = value;
 }

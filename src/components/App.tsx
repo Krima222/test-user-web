@@ -56,8 +56,8 @@ export function App() {
                 );
               }}
               columnCount={3}
-              columnWidth={352}
-              rowHeight={216}
+              columnWidth={342}
+              rowHeight={206}
               rowCount={Math.ceil(filteredUsers.length / 3)}
               height={window.innerHeight}
               width={window.innerWidth - 430}
